@@ -18,16 +18,20 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if(isInteractable && Input.GetKeyDown("e")) {
+            if(action != null) {
+                action.doAction();
+            }
+        }
     }
-
+/*
     private void OnTriggerStay(Collider other) {
         if(Input.GetKeyDown("e")) {
             if(this.isInteractable) {
                 action.doAction();
             }
         }
-    }
+    }*/
 
 
     private void OnTriggerEnter(Collider other) {
