@@ -9514,6 +9514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960240895}
   - component: {fileID: 1960240894}
+  - component: {fileID: 1960240896}
   m_Layer: 0
   m_Name: Problem
   m_TagString: Untagged
@@ -9530,7 +9531,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1960240893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 139916202a203a0f7aae09255f518169, type: 3}
+  m_Script: {fileID: 11500000, guid: da2da3712391dfc4986b184288c720a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1960240895
@@ -9547,6 +9548,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960240896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960240893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33101e367e26c2c47859970f2ce7d799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1961208879
 GameObject:
   m_ObjectHideFlags: 0
