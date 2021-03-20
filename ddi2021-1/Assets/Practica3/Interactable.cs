@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
@@ -18,7 +19,7 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(isInteractable && Input.GetKeyDown("e")) {
+        if(isInteractable && CrossPlatformInputManager.GetButtonDown("Interact")) {
             if(action != null) {
                 action.doAction();
             }

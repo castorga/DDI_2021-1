@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -13,7 +14,7 @@ public class InventoryUI : MonoBehaviour
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.I)) {
+        if(CrossPlatformInputManager.GetButtonDown("Inventory")) {
             panel.SetActive(!panel.activeSelf);
             UpdateUI();
         }
