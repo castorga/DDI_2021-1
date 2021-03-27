@@ -41,7 +41,10 @@ public enum ItemType
 {
     Sword, 
     Bow, 
-    Beer
+    Beer,
+    Wario,
+    Mario,
+    Anchovy
 }
 
 [CreateAssetMenu(fileName= "New Item", menuName="Inventory/Generic")]

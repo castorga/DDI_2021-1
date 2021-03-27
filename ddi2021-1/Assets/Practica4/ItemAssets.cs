@@ -15,4 +15,7 @@ public class ItemAssets : MonoBehaviour
     public Sprite SwordSprite;
     public Sprite BowSprite;
     public Sprite BeerSprite;
+    public Sprite warioSprite;
+    public Sprite marioSprite;
+    public Sprite anchovySprite;
 }
