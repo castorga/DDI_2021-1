@@ -7,9 +7,9 @@ public class Interactable : MonoBehaviour
 {
     public SphereCollider zone;
     private bool isInteractable = false;
-    public delegate void Function();
+    //public delegate void Function();
     public Action action;
-    Function function;
+    //Function function;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,18 +21,18 @@ public class Interactable : MonoBehaviour
     {
         if(isInteractable && CrossPlatformInputManager.GetButtonDown("Interact")) {
             if(action != null) {
-                action.doAction();
+                //action.doAction();
             }
         }
     }
-/*
+
     private void OnTriggerStay(Collider other) {
         if(Input.GetKeyDown("e")) {
             if(this.isInteractable) {
                 action.doAction();
             }
         }
-    }*/
+    }
 
 
     private void OnTriggerEnter(Collider other) {
@@ -45,5 +45,11 @@ public class Interactable : MonoBehaviour
         if(other.tag == "Player") {
             this.isInteractable = false;
         }
+    }
+
+    public void doAction() {
+        if(action != null) {
+                action.doAction();
+            }
     }
 }
