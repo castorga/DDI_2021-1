@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VisibleToggle : Action
+public class VisibleToggle : Initiative
 {
     public Renderer rendrer;
-    public override void doAction() {
+    public override void doInitiative() {
         rendrer.enabled = !rendrer.enabled;
     }
 }

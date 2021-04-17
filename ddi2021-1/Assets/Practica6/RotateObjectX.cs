@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateObjectX : Action
+public class RotateObjectX : Initiative
 {
     public Transform target;
     public float Degrees = 180.0f;
-    public override void doAction() {
+    public override void doInitiative() {
         transform.Rotate(Degrees, 0.0f, 0.0f, Space.World);
     }
 }

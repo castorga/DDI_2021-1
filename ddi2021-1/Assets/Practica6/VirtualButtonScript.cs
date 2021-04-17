@@ -10,7 +10,7 @@ public class VirtualButtonScript : MonoBehaviour, IVirtualButtonEventHandler
     // Start is called before the first frame update
 
     public void OnButtonPressed(VirtualButtonBehaviour vb) {
-        interactableObject.doAction();
+        interactableObject.doInitiative();
         Debug.Log("Se presiono");
     }
 
