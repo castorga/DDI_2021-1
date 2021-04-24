@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using IBM.Watsson.Examples;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
 
@@ -14,9 +15,11 @@ public class Interactable : MonoBehaviour
     public float gazeInteractTime = 2f;
     public float gazeTimer = 0;
     // Start is called before the first frame update
+    public string voiceCommand;
     void Start()
     {
-        
+        ExampleStreaming commandProcessor = GameObject.FindObjectOfType<ExampleStreaming>();
+        commandProcessor.onVoiceCommandRecognized += OnVoiceCommandRecognized;
     }
 
     public virtual void Update() {
@@ -38,6 +41,15 @@ public class Interactable : MonoBehaviour
         if (!gazedAt)
         {
             gazeTimer = 0f;
+        }
+    }
+
+    public void OnVoiceCommandRecognized(string command) {
+        //Debug.Log("Comando esperado: " + voiceCommand);
+        //Debug.Log("Comando recibido:" + command.ToLower() + " .Comando 'esperado': " + voiceCommand.ToLower());
+        //Debug.Log("Is it equal: " + command.ToLower().Equals(voiceCommand.ToLower()));
+        if(gazedAt && command.ToLower().Equals(voiceCommand.ToLower())) {
+            doInitiative();
         }
     }
 
@@ -66,7 +78,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnTRiggerExit(Collider other) {
+    private void OnTriggerExit(Collider other) {
         if(other.tag == "Player") {
             this.isInteractable = false;
         }
